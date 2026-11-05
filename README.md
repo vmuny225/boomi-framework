@@ -295,6 +295,24 @@ bash <skill-path>/scripts/boomi-execution-query.sh --process-id <componentId> --
 bash <skill-path>/scripts/boomi-execution-query.sh --execution-id <id> --logs
 ```
 
+---
+
+## 12. Component XML in this repository
+
+`components/` holds the XML of the framework components, pulled from the platform on 2026-11-05, organised by Boomi component type:
+
+| Folder | Content | Files |
+|---|---|---|
+| `components/process/` | The 14 processes | 14 |
+| `components/connector-action/` | Operations (Database V2, Event Streams, WSS) | 21 |
+| `components/profile.json/` | JSON profiles | 26 |
+| `components/transform.map/` | Map `Map_InterfaceRegistrySeed_to_InterfaceRegistry_V2` | 1 |
+| `components/customlibrary/` | `MySQL_JDBC` (legacy, kept) | 1 |
+
+**Left out on purpose for security:** the 3 connections (`EDV_INTEGRATION (SQL)`, `P2P_Framework_EventStreams_Connection`, `Email_request`). They contain the SQL Server host, the SQL user, the encrypted password and the encrypted Event Streams token. Pull them from the platform when you need them. The `createdBy`/`modifiedBy` attributes (author e-mails) were also removed from every file.
+
+**This is a snapshot for reading and review.** The platform stays the source of truth: before changing a component, pull it again (§ 10) rather than pushing these files.
+
 
 ---
 ---
@@ -593,3 +611,21 @@ bash <skill-path>/scripts/boomi-wss-test.sh --path /ws/simple/executeRetrigger \
 bash <skill-path>/scripts/boomi-execution-query.sh --process-id <componentId> --limit 5
 bash <skill-path>/scripts/boomi-execution-query.sh --execution-id <id> --logs
 ```
+
+---
+
+## 12. Code XML des composants dans ce dépôt
+
+`components/` contient le XML des composants du framework, récupéré sur la plateforme le 2026-11-05 et rangé par type de composant Boomi :
+
+| Dossier | Contenu | Fichiers |
+|---|---|---|
+| `components/process/` | Les 14 process | 14 |
+| `components/connector-action/` | Opérations (Database V2, Event Streams, WSS) | 21 |
+| `components/profile.json/` | Profils JSON | 26 |
+| `components/transform.map/` | Map `Map_InterfaceRegistrySeed_to_InterfaceRegistry_V2` | 1 |
+| `components/customlibrary/` | `MySQL_JDBC` (legacy, conservée) | 1 |
+
+**Exclues volontairement pour des raisons de sécurité :** les 3 connexions (`EDV_INTEGRATION (SQL)`, `P2P_Framework_EventStreams_Connection`, `Email_request`). Elles contiennent le nom du serveur SQL Server, l'utilisateur SQL, le mot de passe chiffré et le token Event Streams chiffré. Récupère-les depuis la plateforme si tu en as besoin. Les attributs `createdBy`/`modifiedBy` (e-mails des auteurs) ont aussi été retirés de tous les fichiers.
+
+**C'est une photo destinée à la lecture et à la revue.** La plateforme reste la référence : avant de modifier un composant, refais un pull (§ 10) au lieu de pousser ces fichiers.

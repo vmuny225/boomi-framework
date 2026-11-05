@@ -1,0 +1,6 @@
+# Never commit credentials or connection components (they hold hosts, users,
+# encrypted passwords and tokens). See README § 12.
+.env
+.env.*
+components/connector-settings/
+.sync-state/

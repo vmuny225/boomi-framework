@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Endeavour Management Services London Limited/edv.framework" componentId="7974b1f4-fae2-45bd-9c61-be804ed00133" version="1" name="WSS_Retrigger_Handler" type="process" createdDate="2026-09-14T11:18:38Z" modifiedDate="2026-09-14T11:18:38Z" deleted="false" currentVersion="true" folderName="edv.framework" folderId="Rjo4ODM3OTY0" branchName="main" branchId="Qjo1NDk1Njc"><bns:encryptedValues/><bns:description>Thin WSS wrapper for the manual retrigger API (decision #3). POST /ws/simple/executeRetrigger with {"correlationId":"..."}. Wrapper + Subprocess pattern: this listener just calls Sub_Retrigger_Handler (which holds all business logic and stays independently testable via boomi-test-execute.sh) and returns its response. The two Sub_Retrigger_Handler return paths (Retriggered/NotFound) each get their own inert Notify before converging on one shared Return Documents step, per BOOMI_THINKING.md's Converging Outcomes remedy. | built with boomi-companion v1.0.57</bns:description><bns:object><process xmlns="" allowSimultaneous="true" enableUserLog="false" processLogOnErrorOnly="false" purgeDataImmediately="false" stopProcessingIfZeroDocuments="true" updateRunDates="false" workload="general"><shapes><shape image="start" name="shape1" shapetype="start" userlabel="" x="48.0" y="46.0"><configuration><connectoraction actionType="Listen" allowDynamicCredentials="NONE" connectorType="wss" hideSettings="true" operationId="64468ed1-ff74-4d75-9836-aa11f034011a"><parameters/><dynamicProperties/>
+            </connectoraction>
+          </configuration><dragpoints><dragpoint name="shape1.dragpoint1" toShape="shape2" x="232.0" y="56.0"/>
+          </dragpoints>
+        </shape><shape image="processcall_icon" name="shape2" shapetype="processcall" userlabel="Call Sub_Retrigger_Handler" x="248.0" y="48.0"><configuration><processcall abort="true" processId="bbfdb162-52a4-4dc8-ae8a-4da97c96d061" wait="true"><parameters/><returnpaths><returnpaths childShapeName="shape18"/><returnpaths childShapeName="shape21"/>
+              </returnpaths>
+            </processcall>
+          </configuration><dragpoints><dragpoint identifier="shape18" name="shape2.dragpoint1" toShape="shape3" x="432.0" y="56.0"/><dragpoint identifier="shape21" name="shape2.dragpoint2" toShape="shape4" x="432.0" y="216.0"/>
+          </dragpoints>
+        </shape><shape image="notify_icon" name="shape3" shapetype="notify" userlabel="Log: retrigger request found and queued" x="448.0" y="48.0"><configuration><notify disableEvent="true" enableUserLog="false" perExecution="false" title=""><notifyMessage>WSS_Retrigger_Handler: retrigger request resolved (Retriggered)</notifyMessage><notifyMessageLevel>INFO</notifyMessageLevel><notifyParameters/>
+            </notify>
+          </configuration><dragpoints><dragpoint name="shape3.dragpoint1" toShape="shape5" x="632.0" y="56.0"/>
+          </dragpoints>
+        </shape><shape image="notify_icon" name="shape4" shapetype="notify" userlabel="Log: correlationId not found in ERROR_QUEUE" x="448.0" y="208.0"><configuration><notify disableEvent="true" enableUserLog="false" perExecution="false" title=""><notifyMessage>WSS_Retrigger_Handler: retrigger request resolved (NotFound)</notifyMessage><notifyMessageLevel>WARNING</notifyMessageLevel><notifyParameters/>
+            </notify>
+          </configuration><dragpoints><dragpoint name="shape4.dragpoint1" toShape="shape5" x="632.0" y="216.0"/>
+          </dragpoints>
+        </shape><shape image="returndocuments_icon" name="shape5" shapetype="returndocuments" userlabel="Response" x="648.0" y="128.0"><configuration><returndocuments label="Response"/>
+          </configuration><dragpoints/>
+        </shape>
+      </shapes>
+    </process></bns:object><bns:processOverrides/></bns:Component>

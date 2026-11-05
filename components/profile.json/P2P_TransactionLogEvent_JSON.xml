@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Endeavour Management Services London Limited/edv.framework" componentId="c10340e2-86c4-4d78-988d-9eef691dd410" version="3" name="P2P_TransactionLogEvent_JSON" type="profile.json" createdDate="2026-09-14T11:17:20Z" modifiedDate="2026-09-28T14:19:00Z" deleted="false" currentVersion="true" folderName="edv.framework" folderId="Rjo4ODM3OTY0" branchName="main" branchId="Qjo1NDk1Njc"><bns:encryptedValues/><bns:description>JSON profile matching the transaction-log event published by Sub_Execution_Logger to Event Streams topic "edv.transaction.log". Consumed by Sub_TransactionLog_Consumer. | built with boomi-companion v1.0.57</bns:description><bns:object><JSONProfile xmlns="" strict="false"><DataElements><JSONRootValue dataType="character" isMappable="true" isNode="true" key="1" name="Root"><DataFormat><ProfileCharacterFormat/></DataFormat><JSONObject isMappable="false" isNode="true" key="2" name="Object"><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="3" name="correlationId"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="4" name="transactionId"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="5" name="interfaceName"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="6" name="logPhase"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="7" name="errorCategory"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="8" name="eventTimestamp"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="9" name="interfaceId"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="10" name="objectType"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="11" name="businessKey"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="12" name="sourceSystem"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="13" name="targetSystem"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="14" name="environment"><DataFormat><ProfileCharacterFormat/></DataFormat>
+            </JSONObjectEntry>
+          </JSONObject><Qualifiers><QualifierList/></Qualifiers>
+        </JSONRootValue>
+      </DataElements><tagLists/>
+    </JSONProfile></bns:object></bns:Component>

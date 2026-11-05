@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><bns:Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bns="http://api.platform.boomi.com/" folderFullPath="Endeavour Management Services London Limited/edv.framework" componentId="78fdf5f2-77d5-414a-8895-30ccc9851cc3" version="1" name="InterfaceRegistry_Seed_JSON" type="profile.json" createdDate="2026-09-16T13:00:07Z" modifiedDate="2026-09-16T13:00:07Z" deleted="false" currentVersion="true" folderName="edv.framework" folderId="Rjo4ODM3OTY0" branchName="main" branchId="Qjo1NDk1Njc"><bns:encryptedValues/><bns:description>One-off seed payload profile for Util_Seed_InterfaceRegistry - a static array of interface_registry rows (one per Cost Object interface: CO_GLA/CO_ACT/CO_WBS/CO_WBSACT/CO_WO), split into one document per row and mapped into InterfaceRegistry_Insert. | built with boomi-companion v1.0.57</bns:description><bns:object><JSONProfile xmlns="" strict="false"><DataElements><JSONRootValue dataType="character" isMappable="true" isNode="true" key="1" name="Root"><DataFormat><ProfileCharacterFormat/></DataFormat><JSONObject isMappable="false" isNode="true" key="2" name="Object"><JSONObjectEntry dataType="character" isMappable="false" isNode="true" key="3" name="rows"><DataFormat><ProfileCharacterFormat/></DataFormat><JSONArray elementType="repeating" isMappable="false" isNode="true" key="4" name="rows"><JSONArrayElement dataType="character" isMappable="false" isNode="true" key="5" maxOccurs="-1" minOccurs="0" name="ArrayElement1"><JSONObject isMappable="false" isNode="true" key="6" name="Object"><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="7" name="interface_id"><DataFormat><ProfileCharacterFormat/></DataFormat>
+                    </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="8" name="domain_name"><DataFormat><ProfileCharacterFormat/></DataFormat>
+                    </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="9" name="interface_name"><DataFormat><ProfileCharacterFormat/></DataFormat>
+                    </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="10" name="source_system"><DataFormat><ProfileCharacterFormat/></DataFormat>
+                    </JSONObjectEntry><JSONObjectEntry dataType="character" isMappable="true" isNode="true" key="11" name="target_system"><DataFormat><ProfileCharacterFormat/></DataFormat>
+                    </JSONObjectEntry>
+                  </JSONObject>
+                </JSONArrayElement>
+              </JSONArray>
+            </JSONObjectEntry>
+          </JSONObject><Qualifiers><QualifierList/></Qualifiers>
+        </JSONRootValue>
+      </DataElements><tagLists/>
+    </JSONProfile></bns:object></bns:Component>
